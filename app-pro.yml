@@ -1,0 +1,40 @@
+eureka:
+  instance:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+spring:
+  datasource:
+    url: jdbc:postgresql://db.greenvendorsource.tk:5432/frmwtest?createDatabaseIfNotExist=true
+    username: greentest
+    password: B8r6Ty3L
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+  rabbitmq:
+    host: test.greenvendorsource.tk
+    port: 5672
+    username: green
+    password: 654321
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    protocol: smtps
+    username: greenvendor86346@gmail.com
+    password: Gr123456
+    properties:
+      mail:
+        transport:
+          protocol: smtps
+      smtps:
+        auth: true
+        starttls:
+          enable: true
+        timeout: 8000
+  thymeleaf:
+    cache: true
